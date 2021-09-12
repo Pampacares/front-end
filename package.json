@@ -36,6 +36,7 @@
       "react-app/jest"
     ]
   },
+  "testPathIgnorePatterns": ["/home/circleci/repo/node_modules/"],
   "browserslist": {
     "production": [
       ">0.2%",
