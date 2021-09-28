@@ -15,7 +15,7 @@ export default function Home() {
         return
       }
       formData.append('file', file, file.name)
-      console.log(file)
+
       const api = axios.create({
         baseURL: "http://localhost:8081/spreadsheet"
       })
