@@ -17,9 +17,6 @@ jobs:
       - run:
           name: Yarn test
           command: yarn test --passWithNoTests
-      - run:
-          name: Yarn build
-          command: yarn build
 
   Deploy-in-develop:
     executor: heroku/default
