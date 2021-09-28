@@ -30,6 +30,13 @@ jobs:
       - heroku/install
       - heroku/deploy-via-git
 workflows:
-  Install-Test-Build:
+  Install-Test-Build-Deploy:
     jobs:
       - Test
+      - Deploy-in-develop:
+          requires:
+            - Test
+          filters:
+            branches:
+              only: develop
+              ignore: /pull\/.*/
