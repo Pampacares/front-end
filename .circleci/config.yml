@@ -24,7 +24,7 @@ jobs:
   Deploy-in-develop:
     executor: heroku/default
     environment:
-      HEROKU_APP_NAME: "frontend-develop"
+      HEROKU_APP_NAME: "front-develop"
     steps:
       - checkout
       - heroku/install
