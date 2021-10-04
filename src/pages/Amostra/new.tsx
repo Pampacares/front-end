@@ -7,9 +7,10 @@ import styles from './Amostra.module.css'
 import { TextField, Container, CssBaseline, Avatar, Typography, Grid, ThemeProvider, Checkbox, FormControlLabel, FormLabel, RadioGroup, Radio, FormHelperText, FormControl, InputLabel, Select, MenuItem, IconButton } from '@material-ui/core';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import { theme } from '../../Theme';
-import { Add, Remove } from '@material-ui/icons';
+import { Add, ArrowBack, ArrowLeft, Remove } from '@material-ui/icons';
 import { validationSchema } from './schema';
 import { initialValues } from './formik';
+import { Link } from 'react-router-dom';
 
 export const NewAmostra = () => {
   const [lat, setLat] = useState(0);
@@ -39,6 +40,11 @@ export const NewAmostra = () => {
     <div className={styles.wrapper}>
       <ThemeProvider theme={theme}>
         <Container component="main" maxWidth="lg">
+          <Link to="/">
+            <Button color="primary" variant="outlined" startIcon={<ArrowBack />}>
+              Voltar
+            </Button>
+          </Link>
           <CssBaseline />
           <div className={styles.paper}>
             <Avatar className={styles.avatar}>
