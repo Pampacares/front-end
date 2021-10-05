@@ -19,9 +19,6 @@ export const NewAmostra = () => {
   const formik = useFormik({
     initialValues: initialValues,
     validationSchema: validationSchema,
-    onReset: (values) => {
-      console.log(JSON.stringify(values, null, 2))
-    },
     onSubmit: (values) => {
       alert(JSON.stringify(values, null, 2))
     },
@@ -34,7 +31,8 @@ export const NewAmostra = () => {
       formik.setFieldValue('proprietario.localizacoes[0].latitude', pos.coords.latitude)
       formik.setFieldValue('proprietario.localizacoes[0].longitude', pos.coords.longitude)
     })
-  }, [formik])
+    // eslint-disable-next-line
+  }, [])
 
   return (
     <div className={styles.wrapper}>
