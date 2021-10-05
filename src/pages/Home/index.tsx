@@ -7,7 +7,6 @@ import { Button } from '@material-ui/core';
 import { Add, AttachFile } from '@material-ui/icons';
 
 export default function Home() {
-  const [disabledBtn, setDisabledBtn] = useState(false)
   const handleUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     let formData = new FormData()
     if (e.target.files) {
